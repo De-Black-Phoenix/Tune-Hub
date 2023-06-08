@@ -1,0 +1,511 @@
+// Color Definition
+// Base Colours
+$gold: #ffb302;
+$green: #04af04;
+
+// Light Variations
+$light-gold: #ffd118;
+$light-green: #76f176;
+
+// Dark Variations
+$dark-gold: #b88608;
+$dark-green: #005a00; 
+
+// Neutral Colours
+$black: #000000;
+$white: #ffffff;
+$gray: #dbd8d8;
+$dark-gray: #777674;
+$background-cover_one: #a08d6b;
+$background-cover_two: #77a577;
+$background-cover_three: #8d6f6f;
+$background-cover_four: #87708b;
+$background-higlight: rgba(88, 88, 100, 0.5);
+$background-higlight_light: rgba(73, 73, 104, 0.5);
+$footer-background_highlight: rgba(29, 17, 24, 0.5);
+
+// Border Radius
+$radius-small: 5px;
+$radius-medium: 8px;
+
+// Font
+
+// font-family: 'Arima', cursive;
+@font-face {
+    font-family: 'Arima', cursive;
+    src: url('./Fonts/Arima/Arima-VariableFont_wght.ttf') format('truetype');
+}
+
+// font-family: 'Righteous', cursive;
+@font-face {
+    font-family: 'Righteous', cursive;
+    src: url('./Fonts/Righteous/Righteous-Regular.ttf') format('truetype');
+}
+
+// font-family: 'Concert One', cursive;
+@font-face {
+    font-family: 'Concert One', cursive;
+    src: url('./Fonts/Concert_One/ConcertOne-Regular.ttf') format('truetype');
+}
+
+// font-family: 'Kaushan Script', cursive;
+@font-face {
+    font-family: 'Kaushan Script', cursive;
+    src: url('./Fonts/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+}
+  
+$text: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$head-one: 'Righteous', cursive;
+$head-two: 'Arima', cursive;
+$head-three: 'Concert One', cursive;    
+$head-four: 'Kaushan Script', cursive;    
+
+// CSS Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+// General Templates to Use
+// Title
+.title {
+    padding-bottom: 5px;
+    font-family: $head-two;
+}
+
+
+
+// Button
+.btn {
+    width: 120px;
+    cursor: pointer;
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+    border-radius: $radius-small;
+    background-color: $light-gold;
+    transition: all .3s ease-in;
+}
+
+.btn:hover {
+    background-color: $dark-gold;
+}
+
+// Styling now begins
+body {
+    background-color: whitesmoke;
+}
+
+.header-container {
+    width: 100%;
+    height: 600px;
+    background-color: $dark-gray;
+    background-image: url("./Images/Backgrounds/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    animation: colorTransition 20s infinite;
+}
+
+@keyframes colorTransition {
+    0% { background-color: $dark-gray; }
+  25% { background-color: $background-cover_one; }
+  50% { background-color: $background-cover_two; }
+  75% { background-color: $background-cover_three; }
+  100% { background-color: $background-cover_four; }
+}
+
+.navbar {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;     // ALign links to the very center
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: $background-higlight;
+}
+
+.navbar ul li a {
+    color: $gray;
+    vertical-align: middle;
+    // padding: 12px;
+    font-family: $head-one;
+    font-size: 1.4em;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.navbar ul li:hover {
+    text-shadow: 0 0 5px $gold, 0 0 10px $gold, 0 0 20px $gold, 0 0 30px $gold;
+    background-color: rgba(73, 73, 104, 0.5);
+}
+
+.header-artist {
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+    left: 1100px;
+    background-image: url("./Images/Artist-Profile/Sark.png");
+    background-position: center;
+    background-size: cover;
+    transform: rotate(10deg);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    animation: fadeImage 4s infinite;
+  }
+  
+  @keyframes fadeImage {
+    0% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 01;
+    //   transform: rotate(25deg);
+    }
+    100% {
+      opacity: 0;
+    //   transform: rotate(8deg);
+    }
+}
+
+.search-container {
+    width: 52%;
+    padding: 15px;
+    background-color: $background-higlight_light;
+    border-radius: $radius-medium;
+    margin-left: 8%;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mid-container {
+    display: flex;
+    align-items: center;
+}
+
+// .search-label {
+//     font-family: $text;
+// }
+
+.title-search {
+    color: $gray;
+    padding-left: 10px;
+}
+
+// General input properties
+.input {
+    padding: 8px;
+    outline: none;
+    border: 2px solid $white;
+    border-radius: $radius-small;
+    background-color: $white;
+    font-family: $head-one;
+    transition: all .2s ease-in;
+}
+
+.input:hover {
+    border: 2px solid $dark-gold;
+}
+
+.input-search {
+    width: 650px;
+}
+
+.mid-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+    border-radius: $radius-medium;
+}
+
+.tags-container { width: 36%; }
+.artist-container { width: 60%; }
+
+.main-tags_container {
+    display: flex;
+    align-items: baseline;
+    padding: 0 25px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.tag-box {
+    background-color: $black;
+    padding: 8px 15px;
+    border-radius: $radius-small;
+    font-family: $text;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.tag-box:hover {
+    background-color: $dark-gold;
+    transition: all .3s ease-in-out;
+}
+
+.artist-container, 
+.tags-container {
+    color: $white;
+    padding: 15px 0;
+    background-color: $gray;
+    border-radius: $radius-medium;
+}
+
+.title-explore {
+    color: $black;
+    padding-left: 35px;
+}
+
+.main-artist_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.artist {
+    width: 90%;
+    height: 250px;
+    padding: 30px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-family: $text;
+    border-radius: $radius-medium;
+    background: linear-gradient(to bottom, #000000, #1a1a07, #000000);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content:space-between;
+    transition: all .4s ease-in-out;
+}
+
+.artist:hover {
+    box-shadow: 6px 7px 5px $dark-gold;
+}
+
+.image {
+    width: 24%;
+    height: 100%;
+    background-size: contain;
+    border-radius: $radius-small;
+    // border: 1px solid $gold;
+}
+
+.text-container {
+    width: 71%;
+    height: 100%;
+    padding: 10px 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow:auto;
+    border-left: 1px solid $gold;
+}
+
+.title-artist {
+    color: $gold;
+}
+
+.artist:last-child {
+    margin-bottom: 0;
+}
+
+.info {
+    font-size: 0.8em;
+    // margin-bottom: 32px;
+}
+
+.btn-learn {
+    margin-top: 15px;
+}
+
+.footer-container {
+    width: 100%;
+    height: 350%;
+    padding: 25px 60px;
+    margin-top: 20px;
+    color: snow;
+    background-color: $dark-gray;
+    background-image: url("./Images/Backgrounds/yvette-de-wit-NYrVisodQ2M-unsplash.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-section {
+    width: 60%;
+    padding: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius-medium;
+    background-color: $footer-background_highlight;
+    margin-top: 15px;    
+}
+
+.about-container {
+    width: 40%;
+    padding: 5px;
+    margin: auto;
+    // background-color: #1a1a07;
+}
+
+.mission-container {
+    width: 35%;
+    margin: auto;
+}
+
+.divider {
+    width: 2px;
+    height: 200px;
+    background-color: $gold;
+}
+
+.title-about {
+    color: $gold;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.footer-info {
+    font-family: $text;
+    font-size: 1.1em;
+}
+
+.media-handles a{
+    color: $gray;
+}
+
+.footer-last_info {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-family: $head-two;
+}
+
+.fab {
+    font-size: 1.54em;
+    margin-top: 18px;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+    border-radius: $radius-small;
+}
+
+.fab:hover {
+    background-color: $dark-gold;
+}
+
+// Shadow Cover
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(14, 13, 13, 0.9); /* Black w/ opacity */
+    transition: all .4s ease-in-out;
+}
+
+.modal-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-page {
+    width: 40%;
+    color: $white;
+    padding: 50px;
+    font-family: $head-two;
+    border-radius: $radius-medium;
+    box-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 20px $white, 0 0 30px $white;
+
+    position: fixed;
+    top: 45%;
+    left: 50%;
+
+    background-color: $dark-gray;
+    background-image: url("./Images/Backgrounds/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: all .4s ease-in-out;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contact-page_show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-page_form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: $radius-medium;
+    background-color: $background-higlight_light;
+}
+
+.input-name, .input-email, .input-description {
+    margin-bottom: 20px;
+}
+
+.btn-form {
+    margin-top: 12px;
+}
+
+// Close button
+.btn-close {
+    font-size: 2.2em;
+    font-weight: 900;
+    color: $white;
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    background-color: $gold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    background-color: $dark-gold;
+    cursor: pointer;
+}

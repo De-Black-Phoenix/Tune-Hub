@@ -1,0 +1,452 @@
+@font-face {
+  font-family: "Arima", cursive;
+  src: url("./Fonts/Arima/Arima-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Righteous", cursive;
+  src: url("./Fonts/Righteous/Righteous-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Concert One", cursive;
+  src: url("./Fonts/Concert_One/ConcertOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kaushan Script", cursive;
+  src: url("./Fonts/Kaushan_Script/KaushanScript-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  padding-bottom: 5px;
+  font-family: "Arima", cursive;
+}
+
+.btn {
+  width: 120px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ffd118;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+  background-color: #b88608;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.header-container {
+  width: 100%;
+  height: 600px;
+  background-color: #777674;
+  background-image: url("./Images/Backgrounds/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  animation: colorTransition 20s infinite;
+}
+
+@keyframes colorTransition {
+  0% {
+    background-color: #777674;
+  }
+  25% {
+    background-color: #a08d6b;
+  }
+  50% {
+    background-color: #77a577;
+  }
+  75% {
+    background-color: #8d6f6f;
+  }
+  100% {
+    background-color: #87708b;
+  }
+}
+.navbar {
+  padding: 20px;
+  padding-top: 40px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  padding: 12px 15px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: rgba(88, 88, 100, 0.5);
+}
+
+.navbar ul li a {
+  color: #dbd8d8;
+  vertical-align: middle;
+  font-family: "Righteous", cursive;
+  font-size: 1.4em;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar ul li:hover {
+  text-shadow: 0 0 5px #ffb302, 0 0 10px #ffb302, 0 0 20px #ffb302, 0 0 30px #ffb302;
+  background-color: rgba(73, 73, 104, 0.5);
+}
+
+.header-artist {
+  width: 280px;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  top: 40px;
+  left: 1100px;
+  background-image: url("./Images/Artist-Profile/Sark.png");
+  background-position: center;
+  background-size: cover;
+  transform: rotate(10deg);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  animation: fadeImage 4s infinite;
+}
+
+@keyframes fadeImage {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.search-container {
+  width: 52%;
+  padding: 15px;
+  background-color: rgba(73, 73, 104, 0.5);
+  border-radius: 8px;
+  margin-left: 8%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mid-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-search {
+  color: #dbd8d8;
+  padding-left: 10px;
+}
+
+.input {
+  padding: 8px;
+  outline: none;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-family: "Righteous", cursive;
+  transition: all 0.2s ease-in;
+}
+
+.input:hover {
+  border: 2px solid #b88608;
+}
+
+.input-search {
+  width: 650px;
+}
+
+.mid-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.tags-container {
+  width: 36%;
+}
+
+.artist-container {
+  width: 60%;
+}
+
+.main-tags_container {
+  display: flex;
+  align-items: baseline;
+  padding: 0 25px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.tag-box {
+  background-color: #000000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.tag-box:hover {
+  background-color: #b88608;
+  transition: all 0.3s ease-in-out;
+}
+
+.artist-container,
+.tags-container {
+  color: #ffffff;
+  padding: 15px 0;
+  background-color: #dbd8d8;
+  border-radius: 8px;
+}
+
+.title-explore {
+  color: #000000;
+  padding-left: 35px;
+}
+
+.main-artist_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.artist {
+  width: 90%;
+  height: 250px;
+  padding: 30px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #000000, #1a1a07, #000000);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.4s ease-in-out;
+}
+
+.artist:hover {
+  box-shadow: 6px 7px 5px #b88608;
+}
+
+.image {
+  width: 24%;
+  height: 100%;
+  background-size: contain;
+  border-radius: 5px;
+}
+
+.text-container {
+  width: 71%;
+  height: 100%;
+  padding: 10px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: auto;
+  border-left: 1px solid #ffb302;
+}
+
+.title-artist {
+  color: #ffb302;
+}
+
+.artist:last-child {
+  margin-bottom: 0;
+}
+
+.info {
+  font-size: 0.8em;
+}
+
+.btn-learn {
+  margin-top: 15px;
+}
+
+.footer-container {
+  width: 100%;
+  height: 350%;
+  padding: 25px 60px;
+  margin-top: 20px;
+  color: snow;
+  background-color: #777674;
+  background-image: url("./Images/Backgrounds/yvette-de-wit-NYrVisodQ2M-unsplash.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-section {
+  width: 60%;
+  padding: 8px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(29, 17, 24, 0.5);
+  margin-top: 15px;
+}
+
+.about-container {
+  width: 40%;
+  padding: 5px;
+  margin: auto;
+}
+
+.mission-container {
+  width: 35%;
+  margin: auto;
+}
+
+.divider {
+  width: 2px;
+  height: 200px;
+  background-color: #ffb302;
+}
+
+.title-about {
+  color: #ffb302;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.footer-info {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.1em;
+}
+
+.media-handles a {
+  color: #dbd8d8;
+}
+
+.footer-last_info {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 1.3em;
+  font-weight: 900;
+  font-family: "Arima", cursive;
+}
+
+.fab {
+  font-size: 1.54em;
+  margin-top: 18px;
+  padding: 10px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+.fab:hover {
+  background-color: #b88608;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(14, 13, 13, 0.9); /* Black w/ opacity */
+  transition: all 0.4s ease-in-out;
+}
+
+.modal-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-page {
+  width: 40%;
+  color: #ffffff;
+  padding: 50px;
+  font-family: "Arima", cursive;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  background-color: #777674;
+  background-image: url("./Images/Backgrounds/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contact-page_show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-page_form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(73, 73, 104, 0.5);
+}
+
+.input-name, .input-email, .input-description {
+  margin-bottom: 20px;
+}
+
+.btn-form {
+  margin-top: 12px;
+}
+
+.btn-close {
+  font-size: 2.2em;
+  font-weight: 900;
+  color: #ffffff;
+  position: absolute;
+  top: 5%;
+  right: 25%;
+  background-color: #ffb302;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: #b88608;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
